@@ -3,7 +3,7 @@ import mockData from '../MOCK_DATA.json'
 
 function TagsInput() {
     const [tags, setTags] = useState<any>([])
-    const [data, setData] = useState<any>(mockData)
+    const [data] = useState<any>(mockData)
     const [search, setSearch] = useState<string>('')
     const visible = useRef<any>()
 
@@ -21,7 +21,7 @@ function TagsInput() {
         
     }
 
-    const handleInputClick = (value: any) => {
+    const handleInputClick = () => {
         visible.current.style.display = 'block'
         console.log(visible.current.hasFocus());
     }
