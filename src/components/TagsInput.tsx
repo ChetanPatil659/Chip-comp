@@ -12,7 +12,10 @@ function TagsInput() {
     }
 
     const removeTags = (index: any) => {
-        setTags(tags.filter((el: any, ind: number) => ind !== index))
+        setTags(tags.filter((el: any, ind: number) => {
+            el
+            return ind !== index
+        }))
     }
 
     const handleClick = (value: any) => {
